@@ -3,60 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XV Portfolio</title>
+    <title>XV Portfolio | مبرمج بوتات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* إعدادات الألوان - تقدر تغيرها من هنا بسهولة */
-        :root { 
-            --bg-color: #0f0f0f; 
-            --main-gold: #ffcc00; 
-            --card-bg: #1a1a1a; 
-            --text-gray: #b0b0b0;
-        }
-        body { background: var(--bg-color); color: white; font-family: sans-serif; margin: 0; text-align: center; }
-        header { padding: 60px 20px; border-bottom: 2px solid var(--main-gold); }
-        .container { max-width: 800px; margin: auto; padding: 20px; }
+        :root { --gold: #ffcc00; --bg: #0b0b0b; --card: #161616; --text: #e0e0e0; }
+        body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; }
         
-        /* تصميم البطاقة الواحدة */
-        .project { 
-            background: var(--card-bg); 
-            padding: 25px; 
-            margin: 20px 0; 
-            border-radius: 12px; 
-            text-align: right; 
-            transition: 0.3s;
-            border: 1px solid #333;
+        /* صورة البروفايل في الزاوية */
+        .profile-corner {
+            position: absolute; top: 20px; right: 20px;
+            width: 80px; height: 80px;
+            border-radius: 50%; border: 2px solid var(--gold);
+            overflow: hidden; box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
         }
-        .project:hover { border-color: var(--main-gold); transform: translateY(-5px); }
-        .project h3 { margin: 0; color: var(--main-gold); }
-        .project p { color: var(--text-gray); font-size: 0.95rem; line-height: 1.6; }
-        .link { color: var(--main-gold); text-decoration: none; font-weight: bold; font-size: 0.8rem; }
+        .profile-corner img { width: 100%; height: 100%; object-fit: cover; }
+
+        header { padding: 80px 20px 40px; text-align: center; }
+        .hero-title { font-size: 2.5rem; color: var(--gold); margin: 0; letter-spacing: 2px; }
+        
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        
+        /* شبكة المشاريع - عشان ما تكون فارغة */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px; }
+        
+        .card { 
+            background: var(--card); padding: 25px; border-radius: 15px; 
+            border-bottom: 4px solid #333; transition: 0.3s; position: relative;
+        }
+        .card:hover { border-color: var(--gold); transform: translateY(-10px); }
+        .card i { font-size: 2rem; color: var(--gold); margin-bottom: 15px; }
+        .card h3 { margin: 10px 0; font-size: 1.4rem; }
+        
+        /* قسم المهارات - لملء الفراغ */
+        .skills { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+        .skill-badge { background: #222; padding: 8px 15px; border-radius: 20px; border: 1px solid #444; font-size: 0.9rem; }
+
+        .contact-btn {
+            display: inline-block; margin-top: 40px; padding: 12px 30px;
+            background: var(--gold); color: black; text-decoration: none;
+            border-radius: 30px; font-weight: bold; transition: 0.3s;
+        }
+        .contact-btn:hover { opacity: 0.8; transform: scale(1.05); }
+
+        footer { margin-top: 60px; padding: 30px; opacity: 0.4; font-size: 0.8rem; text-align: center; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1 style="letter-spacing: 3px;">XV DEVELOPER</h1>
-    <p style="color: var(--text-gray);">مبرمج أنظمة ديسكورد وحلول برمجية</p>
-</header>
-
-<div class="container">
-    <h2>📂 أعمالي (البروتفوليو)</h2>
-
-    <div class="project">
-        <h3>🎫 بوت التذاكر (Ticket Bot)</h3>
-        <p>نظام متطور يدعم أزرار الـ Claim والـ Close، مع نظام حماية يمنع السبام في التذاكر المفتوحة.</p>
-        <a href="#" class="link">[ معاينة الكود ]</a>
-    </div>
-    <div class="project">
-        <h3>🛡️ بوت الحماية (Security)</h3>
-        <p>بوت متخصص في حماية السيرفرات من الروابط الملغمة والـ Self-Bots بشكل تلقائي وسريع.</p>
-        <a href="#" class="link">[ معاينة الكود ]</a>
-    </div>
+    <div class="profile-corner">
+        <img src="https://via.placeholder.com/150" alt="Profile">
     </div>
 
-<footer style="margin-top: 50px; padding: 20px; opacity: 0.5;">
-    Design by XV &copy; 2026
-</footer>
+    <header>
+        <h1 class="hero-title">XV DEVELOPER</h1>
+        <p>متخصص في برمجة بوتات الديسكورد وأنظمة الحماية</p>
+        <div class="skills">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">Discord.py</span>
+            <span class="skill-badge">API Integration</span>
+            <span class="skill-badge">Database</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 style="text-align: center; border-bottom: 1px solid #333; padding-bottom: 10px;">📂 مشاريعي الاحترافية</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-ticket-alt"></i>
+                <h3>نظام التذاكر المطور</h3>
+                <p>بوت تكت احترافي مع ميزات الـ Claim، الحفظ التلقائي (Log)، وأزرار تفاعلية سريعة.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-shield-halved"></i>
+                <h3>نظام الحماية XV</h3>
+                <p>بوت حماية متكامل ضد الـ Self-bots، والروابط المشبوهة مع لوحة تحكم سهلة.</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-code"></i>
+                <h3>أدوات المطورين</h3>
+                <p>مجموعة من الأوامر البرمجية التي تساعد أصحاب السيرفرات على إدارة تقنية أسهل.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="https://discord.com" class="contact-btn">تواصل معي عبر ديسكورد <i class="fab fa-discord"></i></a>
+        </div>
+    </div>
+
+    <footer>
+        جميع الحقوق محفوظة &copy; 2026 - XV Dev
+    </footer>
 
 </body>
 </html>
