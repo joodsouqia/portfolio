@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XV Portfolio</title>
+    <style>
+        /* إعدادات الألوان - تقدر تغيرها من هنا بسهولة */
+        :root { 
+            --bg-color: #0f0f0f; 
+            --main-gold: #ffcc00; 
+            --card-bg: #1a1a1a; 
+            --text-gray: #b0b0b0;
+        }
+        body { background: var(--bg-color); color: white; font-family: sans-serif; margin: 0; text-align: center; }
+        header { padding: 60px 20px; border-bottom: 2px solid var(--main-gold); }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        
+        /* تصميم البطاقة الواحدة */
+        .project { 
+            background: var(--card-bg); 
+            padding: 25px; 
+            margin: 20px 0; 
+            border-radius: 12px; 
+            text-align: right; 
+            transition: 0.3s;
+            border: 1px solid #333;
+        }
+        .project:hover { border-color: var(--main-gold); transform: translateY(-5px); }
+        .project h3 { margin: 0; color: var(--main-gold); }
+        .project p { color: var(--text-gray); font-size: 0.95rem; line-height: 1.6; }
+        .link { color: var(--main-gold); text-decoration: none; font-weight: bold; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 style="letter-spacing: 3px;">XV DEVELOPER</h1>
+    <p style="color: var(--text-gray);">مبرمج أنظمة ديسكورد وحلول برمجية</p>
+</header>
+
+<div class="container">
+    <h2>📂 أعمالي (البروتفوليو)</h2>
+
+    <div class="project">
+        <h3>🎫 بوت التذاكر (Ticket Bot)</h3>
+        <p>نظام متطور يدعم أزرار الـ Claim والـ Close، مع نظام حماية يمنع السبام في التذاكر المفتوحة.</p>
+        <a href="#" class="link">[ معاينة الكود ]</a>
+    </div>
+    <div class="project">
+        <h3>🛡️ بوت الحماية (Security)</h3>
+        <p>بوت متخصص في حماية السيرفرات من الروابط الملغمة والـ Self-Bots بشكل تلقائي وسريع.</p>
+        <a href="#" class="link">[ معاينة الكود ]</a>
+    </div>
+    </div>
+
+<footer style="margin-top: 50px; padding: 20px; opacity: 0.5;">
+    Design by XV &copy; 2026
+</footer>
+
+</body>
+</html>
